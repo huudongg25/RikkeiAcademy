@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<br>
+<button onclick="ex_1()">Bài 1</button></br>
+<button onclick="ex_3()">Bài 3</button></br>
+<button onclick="ex_4()">Bài 4</button></br>
+<button onclick="ex_5()">Bài 5</button></br>
+<button onclick="ex_8()">Bài 8</button></br>
+<script>
+    function ex_1() {
+        let value = prompt("Nhập vào số:")
+
+        for (let k = 2; k <= value; k++) {
+            // 3
+            // 4
+            // 5
+
+            for (let j = 2; j < k; j++) {
+                if (k % j == 0) {
+                    console.log("không phải là số nguyên tố", k, j)
+                }
+            }
+
+        }
+    }
+    function ex_3() {
+        let soChan = "Số chẵn :"
+        let soLe = "Số lẻ :"
+        let soNguyenTo = "Số nguyên tố :"
+        let soHoanHao = "Số hoàn hảo :"
+        let num
+        do {
+            num = +prompt("nhập vào số:")
+            if (num > 0) {
+                if (num % 2 == 0) {
+                    soChan += " " + num
+                } else {
+                    soLe += " " + num
+                }
+
+                if (num > 1) {
+                    let isCheckPrime = true
+                    for (let i = 2; i < num; i++) {
+                        if (num % i == 0) {
+                            isCheckPrime = false
+                            break
+                        }
+                    }
+                    if (isCheckPrime) {
+                        soNguyenTo += " " + num
+                    }
+                }
+
+                let sum = 0
+                for (let i = 1; i <= num / 2; i++) {
+                    if (num % i == 0) {
+                        sum += i
+                    }
+                }
+                if (sum == num) {
+                    soHoanHao += " " + num
+                }
+
+                // do something..
+            }
+
+        } while (num > 0);
+        document.write(soChan)
+        document.write(soLe)
+        document.write(soNguyenTo)
+        document.write(soHoanHao)
+
+    }
+
+    function ex_4() {
+        let sum = 0;
+        let count = 0
+        for (let i = 0; count <= 30; i++) {
+            console.log(i)
+            if (i % 5 == 0) {
+                sum += i
+                count++
+                console.log(count, i)
+            }
+        }
+        // while (count <= 30) {
+        //     if (i % 5 == 0) {
+        //         sum += i
+        //         count++
+        //     }
+        //     i++
+        // }
+        document.write("Kết quả của 30 số đầu tiên chia hết cho 5:" + sum)
+    }
+
+    // 0,1,1,2,3,5,8,13....
+    function ex_5() {
+        let a = 0;
+        let b = 1
+        let nextNumber
+        let count = 2
+        let sum = 0
+
+        while (count <= 20) {
+            sum += a
+            nextNumber = a + b
+            // console.log("nextNumber",nextNumber)
+            a = b
+            b = nextNumber
+            console.log("a", a)
+            // console.log("b",b)
+            count++
+        }
+
+
+        document.write("TỔng 20 số đầu tiên của dãy fibonacci" + sum)
+    }
+
+    function ex_8() {
+        let height = +prompt("Chiều cao của tam giác:")
+        for (let col = 1; col <= height; col++) {
+            let result = ""
+            for (let space = 1; space <= height - col; space++) {
+                result += " "
+            }
+            for (let row = 1; row < col * 2; row++) {
+                result += "*"
+            }
+            console.log(result)
+        }
+    }
+
+</script>
+</body>
+
+</html>

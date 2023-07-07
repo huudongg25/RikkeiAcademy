@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Tính số ngày trong tháng</h1>
+    <label for="month">Nhập số tháng:</label>
+    <input type="number" id="month" name="month" placeholder="Nhập số tháng...">
+    <button onclick="calculateDays()">Tính số ngày</button>
+    <p id="result"></p>
+    <script>
+        function calculateDays() {
+            var month = parseInt(document.getElementById("month").value);
+            var days;
+
+            switch (month) {
+                case 2:
+                    days = "28 hoặc 29";
+                    break;
+                case 4:
+                case 6:
+                case 9:
+                case 11:
+                    days = 30;
+                    break;
+                default:
+                    days = 31;
+                    break;
+            }
+
+            document.getElementById("result").innerHTML = "Tháng " + month + " có " + days + " ngày.";
+        }
+    </script>
+</body>
+
+</html>

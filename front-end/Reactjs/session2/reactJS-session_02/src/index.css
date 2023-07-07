@@ -1,0 +1,79 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+.title-upper {
+  text-transform: uppercase;
+}
+
+.container {
+  border: 2px solid green;
+  border-radius: 20px;
+  margin: 30px;
+  padding: 20px;
+}
+legend {
+  font-weight: 700;
+  font-size: 1.5em;
+  padding: 10px;
+  color: red;
+}
+
+.container-oclock {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+.item {
+  width: 100px;
+  height: 100px;
+  font-weight: 700;
+  color: red;
+  font-size: 1.5em;
+}
+
+.icons {
+  font-size: 100px;
+  color: "pink";
+  margin-right: 20px;
+}
+
+.shaking {
+  animation-name: wobble;
+  animation-duration: 1s;
+}
+@keyframes wobble {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  15% {
+    transform: translate3d(-25%, 0, 0) rotate3d(0, 0, 1, -5deg);
+  }
+  30% {
+    transform: translate3d(20%, 0, 0) rotate3d(0, 0, 1, 3deg);
+  }
+  45% {
+    transform: translate3d(-15%, 0, 0) rotate3d(0, 0, 1, -3deg);
+  }
+  60% {
+    transform: translate3d(10%, 0, 0) rotate3d(0, 0, 1, 2deg);
+  }
+  75% {
+    transform: translate3d(-5%, 0, 0) rotate3d(0, 0, 1, -1deg);
+  }
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}

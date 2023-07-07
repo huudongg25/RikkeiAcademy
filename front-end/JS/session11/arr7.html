@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let sheepSizes = [5, 10, 15, 20, 25];
+        console.log("Kich thuoc dan cuu cua ban la: " + sheepSizes);
+
+        // 7.2
+        let maxSheep = Math.max(...sheepSizes);
+        console.log("Con cuu co kich thuoc lon nhat la: " + maxSheep);
+
+        // 7.3
+        let index = sheepSizes.indexOf(maxSheep);
+        sheepSizes[index] = 8;
+        console.log("Kich thuoc cua con cuu co kich thuoc lon nhat da bi cat long, kich thuoc cua no la: " + sheepSizes[index]);
+
+        // 7.4
+        for (let i = 0; i < sheepSizes.length; i++) {
+            sheepSizes[i] += 50;
+        }
+        console.log("Kich thuoc cac con cuu sau khi duoc cho an tang 50 la: " + sheepSizes);
+
+        // 7.5
+        maxSheep = Math.max(...sheepSizes);
+        console.log("Con cuu co kich thuoc lon nhat hien tai la: " + maxSheep);
+
+        index = sheepSizes.indexOf(maxSheep);
+        sheepSizes[index] = 8;
+        console.log("Con cuu co kich thuoc lon nhat da bi cat long, kich thuoc cua no la: " + sheepSizes[index]);
+
+        // 7.6
+        for (let month = 1; month <= 3; month++) {
+            console.log("Thang " + month);
+            for (let i = 0; i < sheepSizes.length; i++) {
+                sheepSizes[i] += 50;
+            }
+            console.log("Kich thuoc cac con cuu sau khi duoc cho an tang 50 la: " + sheepSizes);
+
+            maxSheep = Math.max(...sheepSizes);
+            console.log("Con cuu co kich thuoc lon nhat hien tai la: " + maxSheep);
+
+            index = sheepSizes.indexOf(maxSheep);
+            sheepSizes[index] = 8;
+            console.log("Con cuu co kich thuoc lon nhat da bi cat long, kich thuoc cua no la: " + sheepSizes[index]);
+        }
+
+        // 7.7
+        let totalSize = 0;
+        for (let i = 0; i < sheepSizes.length; i++) {
+            totalSize += sheepSizes[i];
+        }
+        let sellingPrice = totalSize * 2;
+        console.log("Tong kich thuoc dan cuu la: " + totalSize);
+        console.log("Gia ban danh cuu cua ban la: " + sellingPrice);
+    </script>
+</body>
+
+</html>

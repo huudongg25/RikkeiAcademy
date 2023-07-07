@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Object</h2>
+    <script>
+        const obj = {
+            name:'Dong',
+            age:'12',
+            getName() {
+                return `tôi là ${this.name} và ${this.age} tuổi`
+            }
+        }
+        obj.address = 'Da nang'
+        obj['hobby'] = 'play football'
+        let hobby = obj.hobby
+        let address = obj.address
+        console.log(obj.abc)
+        console.log(hobby)
+        console.log(address)
+        console.log(obj.getName())
+    </script>
+</body>
+</html>

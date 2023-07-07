@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //Số nguyên tố là số tự nhiên chỉ chia hết cho 1 và chính nó
+        function isPrime(number) {
+            if (number <= 1) {
+                return false;
+            }
+
+            if (number <= 3) {
+                return true
+            }
+
+            for (let i = 2; i < Math.sqrt(number); i++) {
+                if (number % i === 0) {
+                    return false;
+                }
+            }
+
+            return true;
+        }
+
+        console.log(isPrime(11));
+        console.log(isPrime(34));
+        console.log(isPrime(36));
+
+        //Số hoàn hảo là số tổng các ước của nó + lại bằng chính nó (K tính chính nó)
+        function isPerfectNumber(number) {
+            let sum = 0;
+
+            for (let i = 1; i <= number / 2; i++) {
+                console.log(i);
+                if (number % i === 0) {
+                    sum += i;
+                }
+            }
+
+            return sum === number;
+        }
+
+        // for(let i = 0;i<1000;i++) {
+        //     if(isPerfectNumber(i)){
+        //         console.log(true);
+        //         console.log(i);
+        //     }
+        // }
+
+        console.log(isPerfectNumber(28));
+
+    </script>
+</body>
+
+</html>

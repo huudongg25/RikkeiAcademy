@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let number = +prompt("Nhập vào số :")
+
+        function isPrimeNumber(number) {
+            if (number <= 1) {
+                return false;
+            }
+
+            if (number <= 3) {
+                return true
+            }
+
+            for (let i = 2; i < Math.sqrt(number); i++) {
+                console.log(number);
+                console.log(i);
+                console.log(Math.sqrt(number));
+                if (number % i === 0) {
+                    return false;
+                }
+            }
+
+            return true;
+        }
+        console.log(isPrimeNumber(number));
+
+        // // b1=============
+        // function resultPrimeNumber(display) {
+        //     let count = 0;
+        //     let number = 2;
+        //     while (count <= display) {
+        //         if (isPrimeNumber(number)) {
+        //             console.log(number);
+        //             count++
+        //         }
+        //         number++
+        //     }
+        // }
+
+        // console.log(number, "số nguyên tố đầu tiên là:")
+        // resultPrimeNumber(number);
+
+
+        // b4
+        // function checkFiveCount(number) {
+        //     let count = 0;
+        //     let sum = 0
+        //     for (let i = 0; count <= number; i++) {
+        //         if (i % 5 == 0) {
+        //             sum += i
+        //             count++
+        //         }
+        //     }
+        //     console.log(number, "số tự nhiên chia hết cho 5 là", sum);
+        // }
+
+        // checkFiveCount(30)
+
+        // b5
+        // function sumFibonacci(num) {
+        //     let sum = 0;
+        //     let a = 0;
+        //     let b = 1;
+        //     let count = 1;
+        //     while (count <= num) {
+        //         let next = a + b
+        //         sum += a
+        //         a = b
+        //         b = next
+        //         count++
+        //     }
+        //     return sum
+        // }
+
+        // console.log(sumFibonacci(10));
+        // b6
+        // const heightRectangle = +prompt("Chiều cao hình chữ nhật")
+        // const weightRectangle = +prompt("Chiều rộng hình chữ nhật")
+
+        // function drawRectangle(height, width) {
+        //     for (let i = 1; i <= height; i++) {
+        //         let row = "";
+        //         if (i == 1 || i == height) {
+        //             for (let j = 1; j <= width; j++) {
+        //                 row += "*";
+        //             }
+        //         } else {
+        //             for (let j = 1; j <= width; j++) {
+        //                 if (j == 1 || j == width) {
+        //                     row += "*"
+        //                 } else {
+        //                     row += " "
+        //                 }
+        //             }
+        //         }
+        //         console.log(row);
+        //     }
+        // }
+
+        // drawRectangle(heightRectangle, weightRectangle)
+
+
+        // b8
+        // function drawTriangle(n) {
+        //     for (let i = 1; i <= n; i++) {
+        //         let row = "";
+        //         for (let j = 1; j <= n - i; j++) {
+        //             row += " ";
+        //         }
+        //         if (i === 1 || i === n) {
+        //             for (let j = 1; j <= i * 2 - 1; j++) {
+        //                 row += "*";
+        //             }
+        //         } else {
+        //             row += "*";
+        //             for (let j = 1; j <= (i - 1) * 2 - 1; j++) {
+        //                 row += " ";
+        //             }
+        //             row += "*";
+        //         }
+        //         console.log(row);
+        //     }
+        // }
+
+        // const height = parseInt(prompt("Nhập chiều cao của tam giác:"));
+        // console.log("Tam giác cân rỗng:");
+        // drawTriangle(height);
+
+        // b9
+        // let saySomeThing = prompt("Nhập vào 1 câu")
+        // function reverseString(str) {
+        //     let result = ""
+        //     for (let i = str.length - 1; i >= 0; i--) {
+        //         result += str[i]
+        //     }
+        //     return result
+        // }
+        // console.log(reverseString(saySomeThing));
+
+
+        // function isPerfectNumber(num) {
+        //     let sum = 0
+        //     for (let i = 1; i <= num / 2; i++) {
+        //         if (num % i == 0) {
+        //             sum += i
+        //         }
+        //     }
+        //     return sum == num
+        // }
+
+        // console.log(number, "là số hoàn hảo", isPerfectNumber(number));
+
+        // console.log(number, "là số nguyên tố", isPrimeNumber(number));
+
+        // let height = prompt("Nhập vào chiều cao tam giác:")
+
+        // for (let i = 0; i <= height; i++) {
+        //     let result = ""
+
+        //     for (let k = 0; k <= height - i; k++) {
+        //         result += " "
+        //     }
+
+        //     for (let j = 1; j <= i; j++) {
+        //         result += "*"
+        //     }
+        //     console.log(result);
+        // }
+
+        // // Vẽ tam giác cân
+        // for (var i = 1; i <= height; i++) {
+        //     var result = '';
+
+        //     for (var j = 0; j <= height - i; j++) {
+        //         result += ' ';
+        //     }
+
+        //     for (var k = 1; k <= 2 * i; k++) {
+        //         result += '*';
+        //     }
+
+        //     console.log(result);
+        // }
+
+    </script>
+</body>
+
+</html>

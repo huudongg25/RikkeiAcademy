@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const num1 = prompt("Nhập vào số a:")
+        const num2 = prompt("Nhập vào số b:")
+
+        if(num1 === 0 && num2 === 0) {
+            alert("Phương trình vô số nghiệm")
+        }else if (num1 === 0 && num2 !== 0) {
+            alert("Phương trình vô nghiệm")
+        } else {
+            let result = -b / a
+            alert("Phương trình có nghiệm là" + " " + result)
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" class="text">
+    <button onclick="checkPalindrome()">Kiểm tra chữ Palindrome</button>
+    <script>
+        function checkPalindrome() {
+            let text = document.querySelector(".text").value;
+            let first = 0;
+            let last = text.length - 1;
+            while (first < last) {
+                console.log(first);
+                console.log(last);
+                if (text[first] != text[last]) {
+                    console.log(text, "K phải là Palindrome");
+                    return
+                }
+                first++;
+                last--;
+            }
+            console.log(text, "là Palindrome");
+        }
+
+    </script>
+</body>
+
+</html>

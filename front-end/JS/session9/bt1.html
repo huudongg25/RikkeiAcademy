@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: grid;
+            place-items: center;
+            padding-top: 20px;
+        }
+
+        input {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Tính điểm 3 môn -->
+    <!-- <label for="physics">Điểm Vật Lý</label>
+    <input id="physics" type="number">
+
+    <label for="chemistry">Điểm Hóa Học</label>
+    <input id="chemistry" type="number">
+
+    <label for="biology">Điểm Sinh Học</label>
+    <input id="biology" type="number">
+
+    <button class="get-point">Tính Điểm</button>
+
+    <span class="average"></span>
+    <span class="total-point"></span> -->
+
+
+
+    <!-- Tính chu vi và diện tích hình tròn -->
+    <!-- <label for="radius">Bán kính hình tròn</label>
+    <input type="number" id="radius">
+
+    <button class="submit">Tính</button>
+
+    <span class="perimeter"></span>
+    <span class="acreage"></span> -->
+
+    <!-- Chuyển đổi từ độ C -> độ F -->
+    <label for="degree">Nhập vào độ C</label>
+    <input type="text" id="degree">
+
+    <button class="convert-degree">Chuyển sang độ F</button>
+    <span class="result"></span>
+
+
+    <script>
+        // Tính điểm 3 môn
+        // const getPoint = document.querySelector(".get-point")
+        // const physics = document.querySelector("#physics")
+        // const chemistry = document.querySelector("#chemistry")
+        // const biology = document.querySelector("#biology")
+        // const average = document.querySelector(".average")
+        // const totalPoint = document.querySelector(".total-point")
+        // console.log(physics);
+        // getPoint.addEventListener("click", () => {
+        //     console.log(physics.value);
+        //     console.log(chemistry.value);
+        //     console.log(biology.value);
+        //     const averagePoint = (Number(physics.value) + Number(chemistry.value) + Number(biology.value)) / 3
+        //     const total = Number(physics.value) + Number(chemistry.value) + Number(biology.value)
+
+        //     average.innerHTML = `Điểm trung bình cộng của 3 môn là : ${averagePoint}`
+        //     totalPoint.innerHTML = `Tổng điểm 3 môn là : ${total}`
+        // })
+
+
+        // Tính chu vi và diện tích hình tròn
+        // const radius = document.querySelector("#radius")
+        // const perimeter = document.querySelector(".perimeter")
+        // const acreage = document.querySelector(".acreage")
+        // const btnSubmit = document.querySelector(".submit")
+
+        // btnSubmit.addEventListener('click', () => {
+        //     let perimeterPoint = (Number(radius.value) * 2) * 3.14;
+        //     let acreagePoint = (Number(radius.value) * Number(radius.value)) * 3.14;
+
+        //     perimeter.innerHTML = `Chu vi hình tròn này là : ${perimeterPoint}`
+        //     acreage.innerHTML = `Diện tích hình tròn này là : ${acreagePoint}`
+        // })
+    
+        
+        // Chuyển đổi từ độ C sang độ F
+        const degree = document.querySelector("#degree")
+        const convertDegree = document.querySelector(".convert-degree")
+        const result = document.querySelector(".result")
+
+        convertDegree.addEventListener("click",()=>{
+            let convertResult = (9 * Number(degree.value)) / 5 + 32
+            result.innerHTML = `${degree.value} độ C sẽ là ${convertResult} độ F`
+        })
+    
+    </script>
+</body>
+
+</html>

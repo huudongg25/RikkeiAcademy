@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: grid;
+            place-items: center;
+            padding-top: 20px;
+        }
+
+        .group {
+            display: flex;
+            align-items: center;
+        }
+
+        button {
+            padding: 0;
+            margin: 0 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="group">
+        <div class="money">
+            <label for="vnd">VND</label>
+            <input type="number" id="vnd">
+        </div>
+
+        <button class="convert-money">Đổi tiền</button>
+
+        <div class="money">
+            <label for="usd">USD</label>
+            <input readonly type="number" id="usd">
+        </div>
+    </div>
+    <p class="result"></p>
+
+    <script>
+        const vnd = document.querySelector("#vnd")
+        const usd = document.querySelector("#usd")
+        const result = document.querySelector(".result")
+        const convertMoney = document.querySelector(".convert-money")
+
+        convertMoney.addEventListener('click', () => {
+            const resultConvert = Number(vnd.value) / 23000
+            usd.value = resultConvert
+            result.innerHTML="Đã chuyển đổi thành công !"
+        })
+    </script>
+</body>
+
+</html>

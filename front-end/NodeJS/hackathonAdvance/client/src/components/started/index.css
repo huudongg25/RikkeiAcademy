@@ -1,0 +1,50 @@
+.wrapper-started {
+    display: flex;
+    justify-content: center !important;
+    align-items: center;
+    padding: 15px;
+}
+
+.title-started {
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.form-started {
+    border-radius: 4px;
+    background-color: #fff;
+    padding: 20px;
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-started input {
+    outline: none;
+    border: 1px solid #ccc;
+    padding: 8px 10px;
+    border-radius: 8px;
+}
+
+.form-started input::placeholder{
+    color: #7e7d7d;
+}
+
+.form-started button {
+    font-weight: 600;
+    background-color: rgb(124, 124, 231);
+    color: #fff;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 8px 10px;
+    border-radius: 8px;
+}
+
+.err-msg {
+    color: rgb(216, 76, 76);
+    font-size: 13px;
+    margin: -10px 0;
+    display: block;
+}

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button onclick="handleAdd()">Add Img</button>
+    <main>
+
+    </main>
+    <script>
+        const mainEl = document.querySelector("main")
+        const img = document.createElement("img")
+        function handleAdd() {
+            let linkImg = prompt("Link ảnh")
+            img.setAttribute("src", linkImg)
+            img.style.width = "100px"
+            img.style.height = "100px"
+            mainEl.appendChild(img)
+        }
+        let a = 10
+        let b = 10
+        window.addEventListener("keypress", (e) => {
+            console.log(e);
+            if (e.key == "8") {
+                a -= 10
+                img.style.transform = `translateY(${a}px)`
+            } else if (e.key == "2") {
+                a += 10
+                img.style.transform = `translateY(${a}px)`
+            } else if (e.key == "4") {
+                b -= 10
+                img.style.transform = `translateX(${b}px)`
+            } else if (e.key == "6") {
+                b += 10
+                img.style.transform = `translateX(${b}px)`
+            }
+        })
+    </script>
+</body>
+
+</html>
