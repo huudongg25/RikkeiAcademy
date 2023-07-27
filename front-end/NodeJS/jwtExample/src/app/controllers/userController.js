@@ -37,12 +37,19 @@ class UserController {
             const user = await User.findOne({ where: { username } })
             // Nếu có user thì so sánh password bằng hàm compare
             if (user) {
-                const myPass = await bcrypt.compare(password, user.password)
-                const accessToken = jwt.sign(user.dataValues, sceretKey)
-                res.status(200).json({
-                    data: user,
-                    accessToken
-                })
+                // Kiểm tra password nhập vào vs password query từ trong DB
+                const myPass = await bcrypt.compare(password, user.dataValues.password)
+                // Thêm điều kiện nếu có thì mới thành công và trả dữ liệu
+                if(myPass) {
+                    const accessToken = jwt.sign(user.dataValues, sceretKey)
+                    res.status(200).json({
+                        data: user,
+                        accessToken
+                    })
+                    // Sai pass thì trả lỗi sai password
+                } else {
+                    res.status(401).json({msg:"Password Wrong"})
+                }
             } else {
                 // Nếu sai thì báo lỗi
                 res.status(401).json({ msg: "Username dont exist" });

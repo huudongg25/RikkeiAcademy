@@ -44,8 +44,9 @@ console.log(calc(19, 21));
 let string: string = 'Nguyễn Văn'
 let string2: string = 'A'
 
-function fullName(a: string, b: string): void {
+function fullName(a: string, b: string): string {
     console.log(a + b);
+    return `${a} ${b}`
 }
 
 fullName(string, string2)
