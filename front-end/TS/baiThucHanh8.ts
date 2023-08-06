@@ -1,10 +1,9 @@
 
-
 function findMax(arr: number[]): number {
   if (arr.length === 1) {
     return arr[0];
   }
-
+  
   const mid = Math.floor(arr.length / 2);
   const leftMax = findMax(arr.slice(0, mid));
   const rightMax = findMax(arr.slice(mid));

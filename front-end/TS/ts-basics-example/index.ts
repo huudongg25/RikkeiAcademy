@@ -53,4 +53,11 @@ fullName(string, string2)
 
 let arr: number[] = [1, 2, 3, 4, 5, 6]
 
-for (let i:number = 0; i < arr.length; i++) console.log(i);
+for (let i: number = 0; i < arr.length; i++) console.log(i);
+
+class Pair<T, U> {
+    constructor(public first: T, public second: U) { }
+}
+
+const numberAndStringPair = new Pair<number, string>(42, "hello");
+const booleanAndObjectPair = new Pair<boolean, { name: string }>(true, { name: "John" });

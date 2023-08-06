@@ -96,9 +96,7 @@ router.patch("/up-point/:id", (req, res) => {
     let idGame = Number(req.params.id)
     let idPlayer = Number(req.body.idPlayer)
     let idRound = Number(req.body.idRound)
-    console.log("game", idGame);
-    console.log("player", idPlayer);
-    console.log("round", idRound);
+  
     fs.readFile(dbPath, (err, data) => {
         if (err) {
             res.status(400).json({ msg: "Error" })
