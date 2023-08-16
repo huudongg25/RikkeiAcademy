@@ -1,12 +1,13 @@
 const User = require('../models/User.model')
 const jwt = require('jsonwebtoken')
-const sceretKey = require('../../configs/jwt.config')
-var bcrypt = require('bcryptjs');
-
+const sceret = require('../../configs/jwt.config');
+const bcrypt = require('bcryptjs/dist/bcrypt');
+let refreshTokenArr = []
 class UserController {
     async handleRegister(req, res) {
         // get username vs password ở body
         const { username, password } = req.body;
+        console.log(req.body);
         try {
             //kiểm tra username đã tồn tại chưa
             const userName = await User.findOne({ where: { username } });
@@ -40,31 +41,71 @@ class UserController {
                 // Kiểm tra password nhập vào vs password query từ trong DB
                 const myPass = await bcrypt.compare(password, user.dataValues.password)
                 // Thêm điều kiện nếu có thì mới thành công và trả dữ liệu
-                if(myPass) {
-                    const accessToken = jwt.sign(user.dataValues, sceretKey)
-                    res.status(200).json({
-                        data: user,
+                if (myPass) {
+                    const accessToken = jwt.sign(user.dataValues, sceret.sceretKey, { expiresIn: "60s" }) // Token hết hạn trong vòng 30s , vd thêm : 30d ,30m
+                    const refreshToken = jwt.sign(user.dataValues, sceret.sceretKeyRefresh, { expiresIn: "365d" }) // Tạo refreshToken để dự trữ
+                    refreshTokenArr.push(refreshToken) // push refresh token vào 1 mảng để lưu trữ
+                    const { password, ...data } = user.dataValues //loại bỏ password ra khỏi phần data trả về frontend,destructuring
+                    res.cookie("refreshToken", refreshToken, { //Lưu refreshToken vào cookie khi đăng nhập thành công
+                        httpOnly: true,
+                        secure: true,
+                        sameSite: "strict"
+                    })
+                    return res.status(200).json({
+                        data,
                         accessToken
                     })
                     // Sai pass thì trả lỗi sai password
                 } else {
-                    res.status(401).json({msg:"Password Wrong"})
+                    return res.status(401).json({ msg: "Password Wrong" })
                 }
             } else {
                 // Nếu sai thì báo lỗi
-                res.status(401).json({ msg: "Username dont exist" });
+                return res.status(401).json({ msg: "Username dont exist" });
             }
         } catch (error) {
-            res.status(404).json({ msg: "not found" })
+            return res.status(404).json({ msg: "not found" })
         }
+    }
+
+    async refreshToken(req, res) {
+        const refreshToken = req.cookies.refreshToken //Lưu ý nhớ cài đặt cookie-parser
+        if (!refreshToken) return res.status(401).json("Unauthenticated")
+        if (!refreshTokenArr.includes(refreshToken)) {
+            return res.status(401).json("Unauthenticated")
+        }
+        jwt.verify(refreshToken, sceret.sceretKeyRefresh, (err, user) => {
+            if (err) {
+                return res.status(400).json("refreshToken is not valid")
+            }
+            const { iat, exp, ...userOther } = user
+            console.log(user);
+            refreshTokenArr = refreshTokenArr.filter(token => token !== refreshToken) //lọc ra những thằng cũ
+            //nếu đúng thì nó sẽ tạo accessToken mới và cả refreshToken mới
+            const newAccessToken = jwt.sign(userOther, sceret.sceretKey, { expiresIn: "60s" })
+            const newRefreshToken = jwt.sign(userOther, sceret.sceretKeyRefresh, { expiresIn: "365d" })
+            refreshTokenArr.push(newRefreshToken)
+            res.cookie("refreshToken", newRefreshToken, { //Lưu NewrefreshToken vào cookie khi reset thành công 
+                httpOnly: true,
+                secure: true,
+                sameSite: "strict"
+            })
+            res.status(200).json({ accessToken: newAccessToken })
+        })
+    }
+
+    async logout(req, res) {
+        res.clearCookie("refreshToken")
+        refreshTokenArr = refreshTokenArr.filter(token => token !== req.cookies.refreshToken)
+        return res.status(200).json("Logout successfully")
     }
 
     async handleGetUser(req, res) {
         try {
             const userAll = await User.findAll()
-            res.status(200).json({ data: userAll })
+            return res.status(200).json({ data: userAll })
         } catch (error) {
-            res.status(500).json({ msg: "Server loi" })
+            return res.status(500).json({ msg: "Server loi" })
         }
     }
 }

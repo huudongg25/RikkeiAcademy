@@ -3,6 +3,7 @@ import './index.css'
 import axiosClient from '../../api/axiosCreate'
 import { BsArrowUpCircleFill, BsArrowDownCircleFill } from 'react-icons/bs'
 import { Link } from 'react-router-dom'
+import { active } from '../../api/axiosCreate'
 export const Dashboard = () => {
     const [dataMain, setDataMain] = useState([])
     const [idGame, setIdGame] = useState()
@@ -17,7 +18,6 @@ export const Dashboard = () => {
             setIdGame(data?.data[data?.data?.length - 1].id)
         })
     }, [isUpdate])
-    console.log(dataMain);
 
     const handleAddRound = () => {
         axiosClient({
@@ -33,7 +33,6 @@ export const Dashboard = () => {
             idPlayer,
             idRound
         }
-        console.log(data);
         axiosClient({
             method: 'PATCH',
             url: `api/v1/game/down-point/${idGame}`,
@@ -48,7 +47,6 @@ export const Dashboard = () => {
             idPlayer,
             idRound
         }
-        console.log(data);
         axiosClient({
             method: 'PATCH',
             url: `api/v1/game/up-point/${idGame}`,
@@ -92,7 +90,6 @@ export const Dashboard = () => {
 
         return newArray;
     };
-
     const newArray = createNewArrayByRounds(dataMain.players);
     // tạo 1 mảng chứa tổng điểm từng người chơi
 
@@ -123,9 +120,10 @@ export const Dashboard = () => {
     const totalAllPlayerScore = playerScores?.reduce((total, item) => {
         return total + item.totalScore
     }, 0)
-    console.log(totalAllPlayerScore);
+    console.log(active);
     return (
         <div className='wrapper-started'>
+            {/* {loading !== 0 && <div className="loading-wrapper"><h2>Loading</h2></div>} */}
             <Link to='/' className='add-game red'>Back</Link>
             <div className='content-dashboard'>
                 <table cellSpacing={0}>

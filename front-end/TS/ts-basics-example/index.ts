@@ -61,3 +61,26 @@ class Pair<T, U> {
 
 const numberAndStringPair = new Pair<number, string>(42, "hello");
 const booleanAndObjectPair = new Pair<boolean, { name: string }>(true, { name: "John" });
+
+interface Person {
+    name: string;
+    age: number
+    getInfo: () => string
+}
+class Test implements Person {
+    name:string
+    age: number
+    birth:string
+    constructor() {
+        this.name = "huudong"
+        this.age = 22
+        this.birth = "22/2/1998"
+    }
+    getInfo(){
+        return `tôi là ${this.name} và ${this.age} tuổi`
+    }
+    
+}
+
+const test1 = new Test()
+console.log(test1.getInfo())

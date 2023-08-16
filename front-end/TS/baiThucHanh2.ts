@@ -1,5 +1,8 @@
+interface Test {
+    [key:string]:any
+}
 const handleCountWord = (text: string) => {
-    const result: object = {}
+    const result: Test = {}
 
     for (let i: number = 0; i < text.length; i++) {
         if (!result[text[i]]) {

@@ -1,26 +1,34 @@
-const jwt = require('jsonwebtoken')
-const sceretKey = require('../../configs/jwt.config')
+const jwt = require('jsonwebtoken');
+const sceret = require("../../configs/jwt.config")
+const checkAuthentication = (req, res, next) => {
+    // Lấy phần header 'Authorization' từ request
+    const authHeader = req.header('Authorization');
 
-
-const checkAuthentication = (req,res,next) => {
-    // get phần header api (header + body)
-    const authHeader = req.header('Authorization')
-    //Bearer Accesstoken
-
-    const token = authHeader && authHeader.split(" ")[1]
-
-
-    //nếu k có token => lỗi
-    if(!token) res.sendStatus(401)
-    try {
-        const decoded = jwt.verify(token,sceretKey)
-        console.log("decoded",decoded);
-        // Nếu mà token đúng thì next()
-        next()
-    } catch (error) {
-        //lỗi accessToken k chính xác
-       return res.sendStatus(403)
+    // Kiểm tra xem header 'Authorization' có tồn tại không
+    if (!authHeader) {
+        return res.sendStatus(401); // Unauthorized
     }
-}
 
-module.exports = checkAuthentication
+    // Kiểm tra xem header 'Authorization' có chứa từ khóa 'Bearer' không
+    const tokenParts = authHeader.split(' ');
+    if (tokenParts.length !== 2 || tokenParts[0] !== 'Bearer') {
+        return res.sendStatus(401); // Unauthorized
+    }
+
+    const token = tokenParts[1];
+    // Giải mã token và kiểm tra tính hợp lệ
+    jwt.verify(token, sceret.sceretKey, (err, user) => {
+        if (err) {
+            console.log(err);
+            return res.status(403).json("Token is not valid"); // Forbidden
+        }
+
+        // Lưu thông tin người dùng vào request để sử dụng ở middleware tiếp theo
+        req.user = user;
+
+        // Cho phép request tiếp tục sang middleware hoặc route tiếp theo
+        next();
+    });
+};
+
+module.exports = checkAuthentication;

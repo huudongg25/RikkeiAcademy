@@ -69,3 +69,14 @@ table thead tr:last-child {
     color: rgb(182, 114, 245);
     cursor: pointer;
 }
+
+.loading-wrapper {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: grid;
+    place-items: center;
+}

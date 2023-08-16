@@ -1,3 +1,7 @@
-const sceretKey = "huudongdeptrai"
+const sceret = {
+    sceretKey: "huudongdeptrai",
+    sceretKeyRefresh: "huudongdeptrairefresh"
+}
 
-module.exports = sceretKey
+
+module.exports = sceret 
