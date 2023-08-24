@@ -1,0 +1,45 @@
+.wrapper-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0 30px;
+    background-color: #fff;
+    height: 70px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 99;
+    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.5);
+}
+
+.sponsor {
+    font-size: 25px;
+    color: rgb(207, 15, 15);
+    font-weight: 700;
+    letter-spacing: 0.6px;
+}
+
+.cart-group {
+    position: relative;
+}
+
+.cart-icon {
+    font-size: 45px;
+    cursor: pointer;
+    padding: 5px;
+}
+
+.cart-quantity {
+    user-select: none;
+    position: absolute;
+    background-color: rgb(207, 15, 15);
+    padding: 5px 10px;
+    color: #fff;
+    border-radius: 50%;
+    font-weight: 700;
+    right: -14px;
+    cursor: pointer;
+    top: -5px;
+}
