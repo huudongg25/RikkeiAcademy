@@ -1,0 +1,11 @@
+.header-group {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.group-banner {
+    width: 200px;
+    height: 100px;
+}

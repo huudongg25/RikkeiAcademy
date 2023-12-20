@@ -1,0 +1,265 @@
+@import url("https://fonts.googleapis.com/css2?family=Anton&family=Open+Sans:ital,wght@0,300;1,300;1,700&family=Poppins:ital,wght@0,300;0,400;0,500;1,600&family=Sacramento&display=swap");
+
+* {
+  margin: 0 auto;
+  box-sizing: border-box;
+  padding: 0;
+
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+/* Phần header và background cho header */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  transition: all 0.5s ease-in-out;
+  z-index: 2;
+  padding-right: 5rem;
+  height: 90px;
+  background-color: white;
+  border-bottom: 1px solid #ccc;
+}
+.container {
+  --bs-gutter-x: none;
+}
+header .nav-screen-md {
+  display: none;
+}
+ul {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+  font-size: larger;
+  color: rgb(19, 19, 44);
+  font-weight: lighter;
+}
+
+body {
+  color: black;
+  background-color: white;
+}
+
+.inner-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.main-menu {
+  display: flex;
+  gap: 30px;
+  padding-top: 10px;
+}
+.logo {
+  font-size: larger;
+  display: grid;
+  padding-top: 10px;
+}
+.logo span:first-child {
+  letter-spacing: 2px;
+  font-weight: bold;
+  font-size: 30px;
+  font-family: Sacramento;
+}
+.logo span:last-child {
+  letter-spacing: 7px;
+  font-weight: lighter;
+  font-size: 25px;
+  font-family: Sacramento;
+}
+.inner-header nav {
+  margin-left: 0;
+}
+.main-menu {
+  margin-right: 0;
+}
+nav .main-menu li a {
+  position: relative;
+}
+main{
+  margin-bottom: 200px;
+}
+nav .main-menu li a:before {
+  position: absolute;
+  top: 57px;
+  left: 0;
+  content: "";
+  display: block;
+  width: 0;
+  height: 3px;
+  background-color: black;
+  transition: width 0.3s linear;
+}
+nav .main-menu li a:hover:before {
+  width: 100%;
+}
+#form-login {
+  position: absolute;
+  display: grid;
+  width: 35%;
+  top: 30%;
+  left: 37%;
+  row-gap: 15px;
+}
+#form-login h3 {
+  letter-spacing: 5px;
+  margin-bottom: 15px;
+}
+#form-login p {
+  margin-bottom: 15px;
+  letter-spacing: 1px;
+  font-size: 86%;
+  color: rgb(86, 85, 85);
+}
+#form-login input {
+  height: 40px;
+  border: 1px solid rgb(216, 216, 216);
+  padding-left: 10px;
+  font-size: 85%;
+}
+#form-login input:nth-child(7) {
+  background-color: black;
+  color: white;
+  font-size: 100%;
+  letter-spacing: 3px;
+  margin-bottom: 30px;
+}
+#form-login input:nth-child(7):hover {
+  background-color: white;
+  color: black;
+  border: 1px solid black;
+  transition: all 0.5s linear;
+}
+#form-login p a {
+  font-size: 99%;
+  color: rgb(49, 45, 45);
+}
+footer {
+  position: absolute;
+  top: 95%;
+  left: 0%;
+  width: 100%;
+  margin: 7rem 0 4rem 0;
+  color: rgb(126, 122, 122);
+  padding-top: 3rem;
+  border-top: 1px solid rgb(238, 238, 238);
+  line-height: 2;
+}
+.col-3 ul li h4 {
+  color: black;
+  font-size: 97%;
+}
+
+@media screen and (max-width: 1024px) {
+}
+
+@media screen and (max-width: 768px) {
+  header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    transition: all 0.9s ease-in-out;
+    z-index: 2;
+    border-bottom: 1px solid rgb(197, 197, 197);
+  }
+  header .nav-screen-md {
+    display: block;
+  }
+  .open {
+    position: absolute;
+    top: 40%;
+    left: 5%;
+  }
+  .sub-menu {
+    display: none;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  .active {
+    display: block;
+  }
+  .sub-menu-item {
+    position: absolute;
+    animation: slide linear 0.35s;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 250px;
+    background-color: #333;
+    color: rgb(222, 222, 222);
+    padding-top: 8rem;
+    font-size: larger;
+  }
+
+  .sub-menu-item li {
+    padding-bottom: 15px;
+    margin: 40px 0;
+  }
+  .sub-menu-item li a {
+    color: white;
+  }
+  body {
+    color: black;
+    background-color: white;
+  }
+  .main-menu-1 {
+    display: flex;
+    gap: 45px;
+    padding-top: 20px;
+    display: none;
+
+  }
+  .main-menu li:nth-child(odd) {
+    display: none;
+  }
+  .logo {
+    font-size: larger;
+    display: grid;
+    padding-top: 10px;
+  }
+  .logo span:first-child {
+    font-weight: bold;
+    font-size: 30px;
+    font-family: Sacramento;
+  }
+  .logo span:last-child {
+    letter-spacing: 7px;
+    font-weight: lighter;
+    font-size: 23px;
+    font-family: Sacramento;
+  }
+  #form-login {
+    position: absolute;
+    display: grid;
+    width: 50%;
+    top: 25%;
+    left: 25%;
+    row-gap: 15px;
+  }
+}
+@media screen and (max-width: 576px) {
+  #form-login {
+    position: absolute;
+    display: grid;
+    width: 70%;
+    top: 25%;
+    left: 14%;
+    row-gap: 15px;
+  }
+  header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    transition: all 0.9s ease-in-out;
+    z-index: 2;
+    border-bottom: 1px solid rgb(197, 197, 197);
+    padding: 0;
+  }
+}

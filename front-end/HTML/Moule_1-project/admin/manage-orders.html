@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ORDER</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="../css/admin.css" />
+  </head>
+  <body>
+    <header>
+      <a href="./index.html" class="logo"
+        ><span>Normandy Candles </span><span>Studio</span></a
+      >
+      <ul class="navbar">
+        <li><a href="../index.html">HOME</a></li>
+        <li><a href="./manage-orders.html">ORDER</a></li>
+        <li><a href="./manage-product.html">PRODUCT</a></li>
+        <li><a href="./manage-users.html">CUSTOMER</a></li>
+      </ul>
+    </header>
+    <main>
+      <div class="table-wrap">
+        <div id="search-bar">
+          <input type="text" class="input-search" />
+          <i class="fa-solid fa-magnifying-glass fa-2xl" onclick="handleSearch()"></i>
+        </div>
+        <table id="table-render-order">
+          <thead>
+            <tr>
+              <th>no.</th>
+              <th>Order Id</th>
+              <th>User Id</th>
+              <th>Date</th>
+              <th>Total</th>
+              <th>Status</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody id="render-order">
+            <tr>
+              <td>1</td>
+              <td>0</td>
+              <td>Montana Forest Minimalist</td>
+              <td>Makomoto</td>
+              <td>2</td>
+              <td></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </main>
+    <script src="../js/manage-orders.js"></script>
+    <script src="../js/db.js"></script>
+  </body>
+</html>

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="../../css/admin.css" />
+  </head>
+  <body>
+    <header>
+      <a href="./index.html" class="logo"
+        ><span>Normandy Candles </span><span>Studio</span></a
+      >
+      <ul class="navbar">
+        <li><a href="../index.html">HOME</a></li>
+        <li><a href="./manage-orders.html">ORDER</a></li>
+        <li><a href="./manage-product.html">PRODUCT</a></li>
+        <li><a href="./manage-users.html">CUSTOMER</a></li>
+      </ul>
+    </header>
+    <main>
+      <div class="table-wrap">
+        <div id="search-bar">
+          <input type="text" class="input-search"/>
+          <i class="fa-solid fa-magnifying-glass fa-2xl" onclick="handleSearch()"></i>
+        </div>
+        <button onclick="handleAdd()" class="add-product-btn">ADD</button>
+        <div class="modalAdd">
+          <label for="name">Product Name:</label>
+          <input type="text"  id="name" placeholder="Nhập tên sản phẩm" />
+          <label for="type">Type:</label>
+          <input type="text" placeholder="Nhập loại" id="type" />
+          <label for="price">Price:</label>
+          <input type="text" placeholder="Nhập giá" id="price" />
+          <label for="quantity">Quantity:</label>
+          <input type="text" placeholder="Nhập số lượng" id="quantity" />
+          <label>ImgUrl:</label>
+          <input type="text" id="url-1" placeholder="Nhập URL 1" />
+          <input type="text" id="url-2" placeholder="Nhập URL 2" />
+          <button id="btn-add" onclick="addToStore()">ADD </button>
+        </div>
+        <table>
+          <thead>
+            <tr>
+              <th>no.</th>
+              <th>ID product</th>
+              <th>Name</th>
+              <th>Type</th>
+              <th>Price</th>
+              <th>Quantity</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody class="render-products">
+            <tr>
+              <td>1</td>
+              <td>1</td>
+              <td>SEVILLA ESCAPIST CANDLE</td>
+
+              <td>SCENT FAMILY: CITRUS / SMOKY</td>
+              <td>41.3</td>
+              <td>15</td>
+              <td>
+                <button
+                  type="button"
+                  class="btn btn-primary"
+                  data-bs-toggle="modal"
+                  data-bs-target="#staticBackdrop"
+                  onclick="handleEdit()"
+                >
+                  Edit</button
+                ><button class="btn btn-delete btn-danger" id="btnDelete">
+                  Delete
+                </button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </main>
+    <!-- Modal -->
+    <div
+      class="modal fade"
+      id="staticBackdrop"
+      data-bs-backdrop="static"
+      data-bs-keyboard="false"
+      tabindex="-1"
+      aria-labelledby="staticBackdropLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-edit">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="staticBackdropLabel">
+           Update Product
+            </h1>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body ">
+            <label for="">ID</label>
+            <input type="text" disabled id="id-product">
+           <label for="name">Product Name:</label>
+          <input type="text"  id="name-product" placeholder="Nhập tên sản phẩm" />
+          <label for="type">Type:</label>
+          <input type="text" placeholder="Nhập loại" id="type-product" />
+          <label for="price">Price:</label>
+          <input type="text" placeholder="Nhập giá" id="price-product" />
+          <label for="quantity">Quantity:</label>
+          <input type="text" placeholder="Nhập số lượng" id="quantity-product" />
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+            <button type="button" onclick="handleUpdate()" class="btn btn-primary">Update</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="../js/manage-product.js"></script>
+    <script src="../js/db.js"></script>
+  </body>
+</html>

@@ -56,7 +56,9 @@ const productList: IProduct[] = [
 ];
 
 function ProductListComponent() {
+  
   const dispatch: Dispatch<any> = useDispatch();
+
   return (
     <section className="wrapper-cart">
       <div className="product-list">

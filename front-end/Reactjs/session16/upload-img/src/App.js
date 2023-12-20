@@ -8,8 +8,11 @@ function App() {
   const [listImg, setListImg] = useState([])
   const handleChangeUpload = (e) => {
     const data = e.target.files[0]
+    
     const storages = storage
+
     const storageRef = ref(storages, `/img/${data.name}`);
+
     uploadBytes(storageRef, data).then((snapshot) => {
       getDownloadURL(snapshot.ref).then(data => setListImg([...listImg, data]))
     });

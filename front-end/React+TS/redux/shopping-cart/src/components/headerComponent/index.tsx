@@ -4,7 +4,7 @@ import { AiOutlineShoppingCart } from "react-icons/ai";
 import { useSelector } from "react-redux";
 
 function HeaderComponent() {
-  const dataCart = useSelector((state: any) => state);
+  const dataCart = useSelector((state: any) => state.cart);
   return (
     <header className="wrapper-header">
       <Link to="/">

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        .background-container {
+            position: relative;
+            background-image: url('https://images.ctfassets.net/hrltx12pl8hq/7vd4eckqr4joKNKwWUv0Mg/844d9d491f4ab942a90259d44bbcfa01/dogs-images.jpg?fit=fill&w=600&h=400');
+            background-size: cover;
+            background-position: center;
+            height: 50vh;
+            color: #fff;
+        }
+
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.4);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="background-container">
+        <div class="overlay">
+            <h2>This is heading</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In, voluptate libero! Quis dolor sint magnam sed
+                velit molestiae vel, amet in earum ipsa nostrum animi nobis ducimus quas beatae minus.</p>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,150 @@
+@import url("https://fonts.googleapis.com/css2?family=Anton&family=Open+Sans:ital,wght@0,300;1,300;1,700&family=Poppins:ital,wght@0,300;0,400;0,500;1,600&family=Sacramento&display=swap");
+
+* {
+  margin: 0 auto;
+  box-sizing: border-box;
+  padding: 0;
+
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+/* Phần header và background cho header */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  transition: all 0.5s ease-in-out;
+  z-index: 2;
+  padding-right: 5rem;
+  height: 90px;
+  background-color: #fff;
+}
+.container {
+  --bs-gutter-x: none;
+}
+header .nav-screen-md {
+  display: none;
+}
+.search {
+  display: none !important;
+}
+ul {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+  font-size: larger;
+  color: rgb(19, 19, 44);
+  font-weight: lighter;
+}
+i {
+  cursor: pointer;
+}
+
+body {
+  color: black;
+  background-color: white;
+}
+.inner-header nav {
+  margin-left: 0;
+}
+.main-menu {
+  margin-right: 0;
+}
+.inner-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.main-menu {
+  display: flex;
+  gap: 30px;
+  padding-top: 10px;
+}
+.logo {
+  font-size: larger;
+  display: grid;
+  padding-top: 10px;
+}
+.logo span:first-child {
+  letter-spacing: 2px;
+  font-weight: bold;
+  font-size: 30px;
+  font-family: Sacramento;
+}
+.logo span:last-child {
+  letter-spacing: 7px;
+  font-weight: lighter;
+  font-size: 25px;
+  font-family: Sacramento;
+}
+footer {
+  margin: 7rem 0 3rem 0;
+  color: rgb(126, 122, 122);
+  padding-top: 3rem;
+  border-top: 1px solid rgb(238, 238, 238);
+  line-height: 2;
+}
+.col-3 ul li h4 {
+  color: black;
+  font-size: 97%;
+}
+main {
+  margin-top: 12rem;
+}
+.input-group-address {
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+  width: 40%;
+}
+.input-group-address label {
+  margin-left: 0;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+.input-group-address input{
+    border: 1px solid #ccc;
+    outline: none;
+    height: 35px;
+    padding-left: 20px;
+}
+.input-group-address button {
+  height: 45px;
+  margin-top: 35px;
+  background-color: rgb(55, 55, 55);
+  color: #fff;
+  font-size: larger;
+  letter-spacing: 4px;
+  border: none;
+}
+#infor-container-submited h4{
+    text-align: center;
+  margin-bottom: 60px;
+  letter-spacing: 3px;
+  
+}
+#infor-container-update{
+    display: none !important;
+}
+#infor-container-update h4{
+    text-align: center;
+  margin-bottom: 60px;
+  letter-spacing: 3px;
+  
+}
+.modal-body{
+  padding: none !important;
+  margin: 0 !important;
+}
+.modal-body .input-group-address{
+  width: 100%;
+}
+.modal-title{
+  margin: 50px 60px 0 60px;
+  letter-spacing: 1px;
+  width: 100%;
+  font-size: large;
+  
+}
+

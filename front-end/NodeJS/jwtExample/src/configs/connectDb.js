@@ -3,7 +3,7 @@ const dev = {
     db: {
       HOST : 'localhost',
       USERNAME: 'root',
-      PASSWORD: 'Liverpool98',
+      PASSWORD: 'password',
       DATABASE: 'jwt',
       dialect:'mysql'
     },

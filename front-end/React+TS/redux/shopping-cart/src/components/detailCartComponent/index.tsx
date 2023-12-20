@@ -3,7 +3,8 @@ import "./index.css";
 import { Dispatch, useMemo } from "react";
 
 function DetailCartComponent() {
-  const dataCart = useSelector((state: any) => state);
+  const dataCart = useSelector((state: any) => state.cart);
+  
   let totalPay: number = useMemo(() => {
     let value = dataCart.reduce((total: any, item: any) => {
       return item.price * item.quantity + total;

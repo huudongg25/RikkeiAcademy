@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SHOP - NORMANDY CANDLES</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="./css/detail.css" />
+  </head>
+  <body>
+    <header>
+      <div class="inner-header container">
+        <nav>
+          <ul class="main-menu main-menu-1">
+            <li><a href="./shop.html">SHOP</a></li>
+            <li><a href="#footer">ABOUT</a></li>
+            <li><a href="#footer">CONTACT</a></li>
+          </ul>
+        </nav>
+        <nav class="nav-screen-md">
+          <i class="fa-solid fa-bars open">
+            <div class="sub-menu">
+              <ul class="sub-menu-item">
+                <i class="fa-solid fa-xmark close"></i>
+                <li><a href="./shop.html">SHOP</a></li>
+                <li><a href="">ABOUT</a></li>
+                <li><a href="">CONTACT</a></li>
+                <li><a href="./login.html">ACCOUNT</a></li>
+                <li><a href="">CART</a></li>
+              </ul>
+            </div>
+          </i>
+        </nav>
+        <a href="./index.html" class="logo"
+          ><span>Normandy Candles </span><span>Studio</span></a
+        >
+       <ul class="main-menu display-userlogin">
+          <li>
+            <a href="./login.html"><i class="fa-solid fa-user"></i></a>
+          </li>
+          <li>
+            <a href=""><i class="fa-solid fa-magnifying-glass search"></i></a>
+          </li>
+          <li>
+            <a href="./my-cart.html">
+              <i class="fa-solid fa-cart-shopping"> </i
+            ></a>
+          </li>
+        </ul>
+      </div>
+    </header>
+    <main>
+      <div class="product-detail-container">
+        <div class="product-detail-1">
+          <div class="product-detail-img-1">
+            <div id="list-product" class="list-group">
+              <a
+                class="list-group-item list-group-item-action"
+                href="#product-1"
+                ><img 
+                  src="https://brooklyncandlestudio.world/cdn/shop/products/montana-forest-candle-brooklyn-candle-studio-641993_800x.jpg?v=1589858761"
+                  alt=""
+              /></a>
+              <a
+                class="list-group-item list-group-item-action"
+                href="#product-2"
+                ><img 
+                  src="https://brooklyncandlestudio.world/cdn/shop/products/montana-forest-candle-brooklyn-candle-studio-641993_800x.jpg?v=1589858761"
+                  alt=""
+              /></a>
+              <a
+                class="list-group-item list-group-item-action"
+                href="#product-3"
+                ><img 
+                  src="https://brooklyncandlestudio.world/cdn/shop/products/montana-forest-minimalist-candle-brooklyn-candle-studio-888129_160x.jpg?v=1589858761"
+                  alt=""
+              /></a>
+            </div>
+          </div>
+          <div class="product-detail-img-2">
+            <div
+              data-bs-spy="scroll"
+              data-bs-target="#list-product"
+              data-bs-smooth-scroll="true"
+              class="scrollspy-example"
+              tabindex="0" id="big-img"
+            >
+              <h4 id="product-1">
+                <img 
+                  src="https://brooklyncandlestudio.world/cdn/shop/products/montana-forest-candle-brooklyn-candle-studio-641993_800x.jpg?v=1589858761"
+                  alt=""
+                />
+              </h4>
+              <h4 id="product-2">
+                <img 
+                  src="https://brooklyncandlestudio.world/cdn/shop/products/montana-forest-candle-brooklyn-candle-studio-641993_800x.jpg?v=1589858761"
+                  alt=""
+                />
+              </h4>
+              <h4 id="product-3">
+                <img 
+                  src="https://brooklyncandlestudio.world/cdn/shop/products/montana-forest-minimalist-candle-brooklyn-candle-studio-888129_800x.jpg?v=1589858761"
+                  alt=""
+                />
+              </h4>
+            </div>
+          </div>
+        </div>
+        <div class="product-content">
+          <div class="product-item-title">
+            <p id="product-name">MONTANA FOREST MINIMALIST CANDLE</p>
+            <p id="product-price">41.43</p>
+            <hr />
+            <p>Buy 3+ Minimalist Candles, Get 15% off plus Free Shipping*</p>
+            <input type="number" value="1" />
+            <br />
+            <button onclick="handleAddToCart()">ADD TO CART</button>
+          </div>
+          <div class="product-item-content">
+            <p>TOP NOTES: Blue Spruce, Pine</p>
+            <p>MIDDLE NOTES: Cypress</p>
+            <p>BASE NOTE: Moss, Cedarwood</p>
+            <p>
+              Inspired by the fresh evergreens that grow in the airy mountains
+              of Montana, this scent is reminiscent of nature in a far-off
+              place. A Brooklyn Candle Studio original blend of blue spruce,
+              pine, and camphor essential oils and fragrance.
+            </p>
+            <p>
+              Made in Brooklyn, New York with 100% soy wax for an eco-friendly
+              clean burn. We use lead-free cotton wicks and premium fragrance
+              oils infused with essential oils. Our candles are vegan,
+              cruelty-free, phthalate-free, and petroleum-free.
+            </p>
+          </div>
+          <div class="accordion" id="accordionPanelsStayOpenExample">
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button
+                  class="accordion-button"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#panelsStayOpen-collapseOne"
+                  aria-expanded="true"
+                  aria-controls="panelsStayOpen-collapseOne"
+                >
+                  SAFETY
+                </button>
+              </h2>
+              <div
+                id="panelsStayOpen-collapseOne"
+                class="accordion-collapse collapse show"
+              >
+                <div class="accordion-body">
+                  <p>
+                    Follow the 2 foot rule - don't place a burning candle near
+                    clothing, books, curtains or anything flammable. Place
+                    candle holders on a stable, heat-resistant surface that is
+                    sturdy and large enough to catch any melted wax. Keep lit
+                    candles away from drafts, ceiling fans and any air currents.
+                  </p>
+                  <p>
+                    Never leave a burning candle unattended. Extinguish all
+                    candles when you leave a room or before going to sleep or if
+                    the flame gets too close to the candle holder or container.
+                    A candle should not be burned for more than four hours at a
+                    time. For a margin of safety, discontinue burning a candle
+                    when 1/4 inch of wax remains in the container.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#panelsStayOpen-collapseTwo"
+                  aria-expanded="false"
+                  aria-controls="panelsStayOpen-collapseTwo"
+                >
+                  PRODUCT DETAILS
+                </button>
+              </h2>
+              <div
+                id="panelsStayOpen-collapseTwo"
+                class="accordion-collapse collapse"
+              >
+                <div class="accordion-body">
+                  <p>
+                    Our Minimalist Collection features elegant straight sided
+                    clear glass jars with modern minimalist labels. Perfect next
+                    to a bud vase filled with freshly picked blooms or your
+                    prettiest succulent on a mantle, nightstand, or coffee
+                    table. The brushed gold lids instantly make your candle
+                    travel-friendly.
+                  </p>
+                  <p>
+                    Diameter: 7,3 cmHeight: 8,9 cmNet Wt: 7,5 oz / 213 gBurn
+                    time: Up to 50 hours
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#panelsStayOpen-collapseThree"
+                  aria-expanded="false"
+                  aria-controls="panelsStayOpen-collapseThree"
+                >
+                  SHIPPING
+                </button>
+              </h2>
+              <div
+                id="panelsStayOpen-collapseThree"
+                class="accordion-collapse collapse"
+              >
+                <div class="accordion-body">
+                  <p>
+                    We send most international packages via UPS Worldwide.
+                    Shipping times vary depending on location, time of year and
+                    local postal service. On average, orders should arrive 3-7
+                    business days after you receive tracking information.
+                  </p>
+                  <p>
+                    International packages may be subject to customs, duties or
+                    other fees that are calculated by country. The customer is
+                    responsible for paying any and all customs duties and fees.
+                    International packages may be delayed by customs.
+                    Unfortunately, we at Brooklyn Candle Studio have no control
+                    over these circumstances.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="smell">
+        <div class="smell-content">
+          <p>SMELLS LIKE: SPRUCE TREES IN FRESH MOUNTAIN AIR.</p>
+          <p>
+            Inspired by the fresh evergreens that grow in the airy mountains of
+            Montana, this scent is reminiscent of nature in a far-off place. A
+            Brooklyn Candle Studio original blend of blue spruce, pine, and
+            camphor essential oils and fragrance.
+          </p>
+        </div>
+      </div>
+    </main>
+    <footer id="footer">
+      <div class="container px-4">
+        <div class="row gx-5">
+          <div class="col-xl-3 col-md-6 col-sm-12">
+            <ul>
+              <li><h4>Help</h4></li>
+              <li>Shipping & Returns</li>
+              <li>Stockists</li>
+              <li>Contact Us</li>
+            </ul>
+          </div>
+          <div class="col-xl-3 col-md-6 col-sm-12">
+            <ul>
+              <li><h4>Company</h4></li>
+              <li>About Us</li>
+              <li>FAQ</li>
+              <li>VIET NAM Site</li>
+            </ul>
+          </div>
+          <div class="col-xl-3 col-md-6 col-sm-12">
+            <ul>
+              <li><h4>Legal</h4></li>
+              <li>Terms Of Service</li>
+              <li>Terms + Conditions</li>
+            </ul>
+          </div>
+          <div class="col-xl-3 col-md-6 col-sm-12">
+            <ul>
+              <li><h4>Store Location</h4></li>
+              <li>Viet Nam</li>
+              <li>France</li>
+              <li>Hungary</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer> 
+  <script src="./js/check-logedIn.js"></script>
+  <script src="./js/detail.js"></script>
+  <script src="./js/db.js"></script> 
+    
+  </body>
+</html>

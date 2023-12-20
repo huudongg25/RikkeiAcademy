@@ -1,0 +1,112 @@
+@import url("https://fonts.googleapis.com/css2?family=Anton&family=Open+Sans:ital,wght@0,300;1,300;1,700&family=Poppins:ital,wght@0,300;0,400;0,500;1,600&family=Sacramento&display=swap");
+
+* {
+  margin: 0 auto;
+  box-sizing: border-box;
+  padding: 0;
+
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+/* Phần header và background cho header */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  transition: all 0.5s ease-in-out;
+  z-index: 2;
+  padding-right: 5rem;
+  height: 90px;
+  background-color: white;
+  border-bottom: 1px solid #ccc;
+}
+main{margin-top: 100px;
+padding-top: 100px ;
+}
+
+main .container{
+   padding-left: 70px;
+  /* --bs-gutter-x: none; */
+}
+header .nav-screen-md {
+  display: none;
+}
+ul {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+  font-size: larger;
+  color: rgb(19, 19, 44);
+  font-weight: lighter;
+}
+
+body {
+  color: black;
+  background-color: white;
+}
+
+.inner-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+}
+.inner-header nav{margin-left: 0;}
+.main-menu{margin-right: 0;}
+.main-menu {
+  display: flex;
+  gap: 30px;
+  padding-top: 10px;
+}
+.logo {
+  font-size: larger;
+  display: grid;
+  padding-top: 10px;
+  
+}
+.logo span:first-child {
+  letter-spacing: 2px;
+  font-weight: bold;
+  font-size: 30px;
+  font-family: Sacramento;
+}
+.logo span:last-child {
+  letter-spacing: 7px;
+  font-weight: lighter;
+  font-size: 25px;
+  font-family: Sacramento;
+ 
+}
+nav .main-menu li a {
+  position: relative;
+}
+
+nav .main-menu li a:before {
+  position: absolute;
+  top: 57px;
+  left: 0;
+  content: "";
+  display: block;
+  width: 0;
+  height: 3px;
+  background-color: black;
+  transition: width 0.3s linear;
+}
+nav .main-menu li a:hover:before {
+  width: 100%;
+}
+footer {
+   
+  width: 100%;
+  margin: 7rem 0 4rem 0;
+  color: rgb(126, 122, 122);
+  padding-top: 3rem;
+  border-top: 1px solid rgb(238, 238, 238);
+  line-height: 2;
+  font-size: 90%;
+}
+.col-3 ul li h4 {
+  color: black;
+  font-size: 90%;
+}

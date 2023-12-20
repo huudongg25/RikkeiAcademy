@@ -22,7 +22,7 @@ app.use(morgan('dev')); // Logger error
 app.use(cors()); // Chia sẻ tài nguyên giữa client and server
 //Database
 const corsOptions = {
-  origin: corsOrigin,
+  origin: "*",
   credentials: true, //access-control-allow-credentials:true
   optionSuccessStatus: 200,
 };

@@ -1,6 +1,6 @@
 const sceret = {
-    sceretKey: "huudongdeptrai",
-    sceretKeyRefresh: "huudongdeptrairefresh"
+    sceretKey: "1234",
+    sceretKeyRefresh: "1234"
 }
 
 

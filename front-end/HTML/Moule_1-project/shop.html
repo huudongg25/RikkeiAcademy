@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shop - Normandy Candles</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="./css/shop.css" />
+  </head>
+  <body>
+    <header>
+      <div class="inner-header container">
+        <nav>
+          <ul class="main-menu main-menu-1">
+            <li><a href="./shop.html">SHOP</a></li>
+            <li><a href="#footer">ABOUT</a></li>
+            <li><a href="#footer">CONTACT</a></li>
+          </ul>
+        </nav>
+        <nav class="nav-screen-md">
+          <i class="fa-solid fa-bars open">
+            <div class="sub-menu">
+              <ul class="sub-menu-item">
+                <i class="fa-solid fa-xmark close"></i>
+                <li><a href="./shop.html">SHOP</a></li>
+                <li><a href="">ABOUT</a></li>
+                <li><a href="">CONTACT</a></li>
+                <li><a href="./login.html">ACCOUNT</a></li>
+                <li><a href="">CART</a></li>
+              </ul>
+            </div>
+          </i>
+        </nav>
+        <a href="./index.html" class="logo"
+          ><span>Normandy Candles </span><span>Studio</span></a
+        >
+        <ul class="main-menu display-userlogin">
+          <li>
+            <a href="./login.html"><i class="fa-solid fa-user"></i></a>
+          </li>
+          <li>
+            <i class="fa-solid fa-magnifying-glass search"></i>
+          </li>
+          <li>
+            <a href="./my-cart.html">
+              <i class="fa-solid fa-cart-shopping"> </i
+            ></a>
+          </li>
+        </ul>
+      </div>
+    </header>
+    <div class="search-product">
+      <input
+        type="text"
+        placeholder="Nhập tên sản phẩm cần tìm kiếm"
+        class="search-image-input"
+      /><button onclick="handleSearch()">SEARCH</button>
+    </div>
+    <main>
+      <div id="banner">
+        <div class="inner-banner">
+          <h3>ALL CANDLES</h3>
+          <p>
+            Our candles are made in Brooklyn, New York with 100% soy wax for an
+            eco-friendly clean burn. We use lead-free cotton wicks and premium
+            fragrance oils infused with essential oils. Our candles are vegan,
+            cruelty-free, phthalate-free, and petroleum-free.
+          </p>
+        </div>
+      </div>
+      <section>
+        <div class="container px-4 text-center">
+          <div class="row gx-2 render-products search-result">
+            <div class="col-xl-3 col-md-6 col-12">
+              <div class="p-1 candle-item">
+                <span class="tag-candle-item">BESTSELLER</span>
+                <img
+                  src="https://brooklyncandlestudio.com/cdn/shop/products/santorini-escapist-candle-brooklyn-candle-studio-819274_800x.jpg?v=1573684049"
+                  alt=""
+                />
+                <button onclick="handleToDetail()" class="btn-add-to-cart">
+                  ADD TO CART
+                </button>
+                <div class="title-candle">
+                  <p>SCENT FAMILY: FRUIT / EARTHY</p>
+                  <p>SANTORINI ESCAPIST CANDLE</p>
+                  <p>913.000₫</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-3 col-md-6 col-12">
+              <div class="p-1 candle-item">
+                <span class="tag-candle-item">BESTSELLER</span>
+                <div class="add-to-cart-group">
+                  <img
+                    src="https://brooklyncandlestudio.com/cdn/shop/products/santorini-escapist-candle-brooklyn-candle-studio-819274_800x.jpg?v=1573684049"
+                    alt=""
+                  />
+                  <button onclick="handleToDetail()" class="btn-add-to-cart">
+                    ADD TO CART
+                  </button>
+                </div>
+
+                <div class="title-candle">
+                  <p>SCENT FAMILY: FRUIT / EARTHY</p>
+                  <p>SANTORINI ESCAPIST CANDLE</p>
+                  <p>913.000₫</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-3 col-md-6 col-12">
+              <div class="p-1 candle-item">
+                <span class="tag-candle-item">BESTSELLER</span>
+                <img
+                  src="https://brooklyncandlestudio.com/cdn/shop/products/santorini-escapist-candle-brooklyn-candle-studio-819274_800x.jpg?v=1573684049"
+                  alt=""
+                />
+                <button onclick="handleToDetail()" class="btn-add-to-cart">
+                  ADD TO CART
+                </button>
+                <div class="title-candle">
+                  <p>SCENT FAMILY: FRUIT / EARTHY</p>
+                  <p>SANTORINI ESCAPIST CANDLE</p>
+                  <p>913.000₫</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-3 col-md-6 col-12">
+              <div class="p-1 candle-item">
+                <span class="tag-candle-item">BESTSELLER</span>
+                <img
+                  src="https://brooklyncandlestudio.com/cdn/shop/products/santorini-escapist-candle-brooklyn-candle-studio-819274_800x.jpg?v=1573684049"
+                  alt=""
+                />
+                <button onclick="handleToDetail()" class="btn-add-to-cart">
+                  ADD TO CART
+                </button>
+                <div class="title-candle">
+                  <p>SCENT FAMILY: FRUIT / EARTHY</p>
+                  <p>SANTORINI ESCAPIST CANDLE</p>
+                  <p>913.000₫</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer id="footer">
+      <div class="container px-4">
+        <div class="row gx-5">
+          <div class="col-xl-3 col-md-6 col-sm-12">
+            <ul>
+              <li><h4>Help</h4></li>
+              <li>Shipping & Returns</li>
+              <li>Stockists</li>
+              <li>Contact Us</li>
+            </ul>
+          </div>
+          <div class="col-xl-3 col-md-6 col-sm-12">
+            <ul>
+              <li><h4>Company</h4></li>
+              <li>About Us</li>
+              <li>FAQ</li>
+              <li>VIET NAM Site</li>
+            </ul>
+          </div>
+          <div class="col-xl-3 col-md-6 col-sm-12">
+            <ul>
+              <li><h4>Legal</h4></li>
+              <li>Terms Of Service</li>
+              <li>Terms + Conditions</li>
+            </ul>
+          </div>
+          <div class="col-xl-3 col-md-6 col-sm-12">
+            <ul>
+              <li><h4>Store Location</h4></li>
+              <li>Viet Nam</li>
+              <li>France</li>
+              <li>Hungary</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="./js/check-logedIn.js"></script>
+    <script src="./js/shop.js"></script>
+    <script src="./js/db.js"></script>
+  </body>
+</html>

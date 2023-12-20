@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            padding: 0;
+            margin: 0;
+        }
+
+        .wrapper-main {
+            margin-top: 60px;
+            padding: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper-main">
+        <%- include('header')%>
+            <h1>Welcome to EJS</h1>
+            <%= name %>
+                <ul>
+                    <% for(var i=0; i < pets.length; i++){ %>
+                        <li>
+                            <%= pets[i] %>
+                        </li>
+                        <% } %>
+                </ul>
+    </div>
+</body>
+
+</html>

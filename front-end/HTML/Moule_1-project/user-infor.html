@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="./css/user-infor.css" />
+  </head>
+  <body>
+    <header>
+      <div class="inner-header container">
+        <nav>
+          <ul class="main-menu main-menu-1">
+            <li><a href="./shop.html">SHOP</a></li>
+            <li><a href="#footer">ABOUT</a></li>
+            <li><a href="#footer">CONTACT</a></li>
+          </ul>
+        </nav>
+        <nav class="nav-screen-md">
+          <i class="fa-solid fa-bars open">
+            <div class="sub-menu">
+              <ul class="sub-menu-item">
+                <i class="fa-solid fa-xmark close"></i>
+                <li><a href="./shop.html">SHOP</a></li>
+                <li><a href="">ABOUT</a></li>
+                <li><a href="">CONTACT</a></li>
+                <li><a href="./login.html">ACCOUNT</a></li>
+                <li><a href="">CART</a></li>
+              </ul>
+            </div>
+          </i>
+        </nav>
+        <a href="./index.html" class="logo"
+          ><span>Normandy Candles </span><span>Studio</span></a
+        >
+        <ul class="main-menu display-userlogin">
+          <li>
+            <a href="./login.html"><i class="fa-solid fa-user"></i></a>
+          </li>
+          <li>
+            <i class="fa-solid fa-magnifying-glass search"></i>
+          </li>
+          <li><i class="fa-solid"></i></li>
+          <li>
+            <a href="./my-cart.html">
+              <i class="fa-solid fa-cart-shopping"> </i
+            ></a>
+          </li>
+        </ul>
+      </div>
+    </header>
+    <main>
+      <div class="container" id="infor-container-submited">
+        <h4>INFORMATION</h4>
+        <form action="" id="form-address">
+          <div class="input-group-address">
+            <label for="">Email:</label>
+            <input type="email" disabled id="email-submited" />
+            <label for="first-name"> First name:</label>
+            <input disabled type="text" id="first-name-submited" />
+            <label for="last-name"> Last name:</label>
+            <input disabled type="text" id="last-name-submited" />
+            <label for="address">Address:</label>
+            <input disabled type="text" id="address-submited" />
+            <label for="phone">Phone:</label>
+            <input disabled type="text" id="phone-submited" />
+            <button
+              onclick="handleEdit()"
+              type="button"
+              class="btn btn-primary"
+              data-bs-toggle="modal"
+              data-bs-target="#exampleModal"
+            >
+              EDIT
+            </button>
+          </div>
+        </form>
+      </div>
+      <!-- Modal -->
+
+      <div
+        class="modal fade"
+        id="exampleModal"
+        tabindex="-1"
+        aria-labelledby="exampleModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="exampleModalLabel">
+                UPDATE INFORMATION
+              </h1>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <div class="input-group-address">
+                <label for="">Email:</label>
+                <input type="email" disabled id="email-update" />
+                <label for="first-name"> First name:</label>
+                <input type="text" id="first-name-update" />
+                <label for="last-name"> Last name:</label>
+                <input type="text" id="last-name-update" />
+                <label for="address">Address:</label>
+                <input required type="text" id="address-update" />
+                <label for="phone">Phone:</label>
+                <input required type="text" id="phone-update" />
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-secondary"
+                data-bs-dismiss="modal"
+              >
+                Close
+              </button>
+              <button
+                onclick="handleUpdate()"
+                type="button"
+                class="btn btn-primary"
+              >
+                Save changes
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer id="footer">
+      <div class="container px-4">
+        <div class="row gx-5">
+          <div class="col-xl-3 col-md-6 col-sm-12">
+            <ul>
+              <li><h4>Help</h4></li>
+              <li>Shipping & Returns</li>
+              <li>Stockists</li>
+              <li>Contact Us</li>
+            </ul>
+          </div>
+          <div class="col-xl-3 col-md-6 col-sm-12">
+            <ul>
+              <li><h4>Company</h4></li>
+              <li>About Us</li>
+              <li>FAQ</li>
+              <li>VIET NAM Site</li>
+            </ul>
+          </div>
+          <div class="col-xl-3 col-md-6 col-sm-12">
+            <ul>
+              <li><h4>Legal</h4></li>
+              <li>Terms Of Service</li>
+              <li>Terms + Conditions</li>
+            </ul>
+          </div>
+          <div class="col-xl-3 col-md-6 col-sm-12">
+            <ul>
+              <li><h4>Store Location</h4></li>
+              <li>Viet Nam</li>
+              <li>France</li>
+              <li>Hungary</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="./js/check-logedIn.js"></script>
+    <script src="./js/user-infor.js"></script>
+  </body>
+</html>

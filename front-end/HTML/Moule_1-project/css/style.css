@@ -1,0 +1,547 @@
+@import url("https://fonts.googleapis.com/css2?family=Anton&family=Open+Sans:ital,wght@0,300;1,300;1,700&family=Poppins:ital,wght@0,300;0,400;0,500;1,600&family=Sacramento&display=swap");
+
+* {
+  margin: 0 auto;
+  box-sizing: border-box;
+  padding: 0;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+/* Phần header và background cho header */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  transition: all 0.5s ease-in-out;
+  z-index: 2;
+  padding-right: 5rem;
+  height: 90px;
+}
+.container {
+  --bs-gutter-x: none;
+}
+header .nav-screen-md {
+  display: none;
+}
+/* .search {
+  display: none ;
+} */
+ul {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+  font-size: larger;
+  color: rgb(19, 19, 44);
+  font-weight: lighter;
+}
+i {
+  cursor: pointer;
+}
+
+body {
+  color: black;
+  background-color: white;
+}
+.inner-header nav {
+  margin-left: 0;
+}
+.main-menu {
+  margin-right: 0;
+}
+.inner-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.main-menu {
+  display: flex;
+  gap: 30px;
+  padding-top: 10px;
+}
+.logo {
+  font-size: larger;
+  display: grid;
+  padding-top: 10px;
+}
+.logo span:first-child {
+  letter-spacing: 2px;
+  font-weight: bold;
+  font-size: 30px;
+  font-family: Sacramento;
+}
+.logo span:last-child {
+  letter-spacing: 7px;
+  font-weight: lighter;
+  font-size: 25px;
+  font-family: Sacramento;
+}
+#banner {
+  background-image: url(../IMG/summer_hp_1600x.webp);
+  min-height: 650px;
+  width: 100%;
+  background-size: cover;
+  background-position-y: bottom;
+  position: relative;
+  background-color: rgb(220, 229, 226);
+  margin-bottom: 6rem;
+  transition: all 0.9s ease-in-out;
+}
+header.sticky {
+  background-color: white;
+  border-bottom: none;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+.inner-banner {
+  position: absolute;
+  top: 37%;
+  left: 30%;
+  color: white;
+  font-size: larger;
+}
+.inner-banner p {
+  letter-spacing: 5px;
+  text-align: center;
+  margin-bottom: 33px;
+  font-size: smaller;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+.inner-banner h3 {
+  letter-spacing: 5px;
+  margin-bottom: 50px;
+  text-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+.inner-banner button {
+  display: block;
+  margin: 0 auto;
+  width: 290px;
+  height: 50px;
+  border: none;
+  letter-spacing: 2px;
+  background-color: white;
+  color: rgb(34, 34, 78);
+  transition: width 0.6s linear;
+}
+.inner-banner button:hover {
+  width: 80%;
+  background-color: transparent;
+  border: 1px solid white;
+  color: rgb(34, 34, 78);
+  font-weight: bolder;
+}
+nav .main-menu li a {
+  position: relative;
+}
+
+nav .main-menu li a:before {
+  position: absolute;
+  top: 57px;
+  left: 0;
+  content: "";
+  display: block;
+  width: 0;
+  height: 3px;
+  background-color: black;
+  transition: width 0.3s linear;
+}
+nav .main-menu li a:hover:before {
+  width: 100%;
+}
+.about-intro {
+  width: 400px;
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  line-height: 2;
+  color: rgb(34, 34, 78);
+  position: relative;
+}
+.about-intro h3 {
+  letter-spacing: 5px;
+  margin-bottom: 2.5rem;
+  font-weight: bold;
+  text-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+.about-intro a {
+  position: relative;
+  margin-bottom: 15rem;
+  font-weight: bold;
+}
+.about-intro a:before {
+  display: block;
+  position: absolute;
+  left: 0;
+  content: "";
+  top: 110%;
+  width: 0;
+  height: 2px;
+  background-color: black;
+  transition: width 0.3s linear;
+}
+.about-intro a:hover::before {
+  width: 100%;
+}
+.infor-materials {
+  background: url(https://brooklyncandlestudio.com/cdn/shop/files/icons-01_bb65182c-e541-4e3e-b5d0-8d2addfcc6d7_1600x.jpg?v=1632439678);
+  background-size: contain;
+  width: 100%;
+  height: 190px;
+}
+.infor-materials {
+  margin: 60px 0 50px 20px;
+}
+.inner-img {
+  height: 600px;
+}
+.inner-candle-preview {
+  background: url(https://scontent.cdninstagram.com/v/t51.2885-15/351019422_1241464893922812_7882500465474465037_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=8ae9d6&_nc_ohc=mZ3ckfwf-4cAX8Wx6lv&_nc_ht=scontent.cdninstagram.com&edm=AM6HXa8EAAAA&oh=00_AfAB7YinbkjX4IXOUE7NIj7O2sM9PIA5MdmrP7y2CFvqPw&oe=64BAE4CC);
+  width: 100%;
+  height:inherit;
+  background-size: cover;
+  padding: 0;
+}
+.inner-candle-preview-1 {
+  background: url(https://scontent.cdninstagram.com/v/t51.2885-15/355430881_192954543404828_5109577289944653622_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=8ae9d6&_nc_ohc=5QlvAVAHMKAAX-E73js&_nc_ht=scontent.cdninstagram.com&edm=AM6HXa8EAAAA&oh=00_AfDS-lbp8vI3WGdJvGenLrIBYmnIa7PAS1m99f3aKOg7AA&oe=64BC5C64);
+  width: 100%;
+  height: inherit !important;
+  background-size: cover;
+  padding: 0;
+}
+.candle-preview-content {
+  margin: 10rem auto;
+  line-height: 2;
+  text-align: justify;
+}
+.candle-preview-content p {
+  margin-bottom: 20px;
+}
+.candle-preview-content p:first-child {
+  font-size: 95%;
+  letter-spacing: 4px;
+}
+.candle-preview-content h3 {
+  margin-bottom: 35px;
+  letter-spacing: 4px;
+}
+.candle-preview-content a {
+  font-size: 95%;
+  margin-top: 20px;
+  letter-spacing: 3px;
+  position: relative;
+}
+.candle-preview-content a:before {
+  display: block;
+  position: absolute;
+  left: 0;
+  content: "";
+  top: 110%;
+  width: 0;
+  height: 2px;
+  background-color: black;
+  transition: width 0.4s linear;
+}
+.candle-preview-content a:hover:before {
+  width: 100%;
+}
+footer {
+  margin: 7rem 0 3rem 0;
+  color: rgb(126, 122, 122);
+  padding-top: 3rem;
+  border-top: 1px solid rgb(238, 238, 238);
+  line-height: 2;
+}
+.col-3 ul li h4 {
+  color: black;
+  font-size: 97%;
+}
+.search-product {
+  width: 100%;
+  display: flex;
+  gap: 20px;
+  position: fixed;
+  z-index: 1001;
+  top: 90px;
+  display: none;
+  background-color: white;
+}
+.active {
+  display: block;
+}
+.search-product input {
+  width: 90%;
+  height: 60px;
+  border-radius: none;
+  outline: none;
+  border: 1px solid #ccc;
+  color: #3e3d3d;
+  padding-left: 50px;
+  letter-spacing: 1px;
+}
+
+.search-product button {
+  width: 10%;
+  height: 60px;
+  background-color: black;
+  color: white;
+  border-radius: none;
+  font-size: larger;
+  outline: none;
+  letter-spacing: 3px;
+  border: none;
+}
+@keyframes slide {
+  from {
+    transform: translateX(-20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* responsive */
+
+@media screen and (max-width: 1280px) {
+  /* .col-6 {
+    height: 600px;
+  }
+  .inner-candle-preview {
+    background: url(https://brooklyncandlestudio.com/cdn/shop/products/limited-edition-playa-samara-candle-brooklyn-candle-studio-505194_900x.jpg?v=1688749765);
+    width: 100%;
+    height: 600px;
+    background-size: cover;
+    padding: 0;
+  } */
+}
+
+
+@media screen and (max-width: 768px) {
+  #banner {
+    background-image: url(../IMG/summer_hp_1600x.webp);
+    height: 400px;
+    width: 100%;
+    background-size: cover;
+    background-position-x: center;
+    position: relative;
+    background-color: rgb(220, 229, 226);
+    margin-bottom: 6rem;
+    transition: all 0.9s ease-in-out;
+  }
+  header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    transition: all 0.9s ease-in-out;
+    z-index: 2;
+    padding: 0 0 0 2rem;
+  }
+  header .nav-screen-md {
+    display: block;
+  }
+  .open {
+    position: absolute;
+    top: 40%;
+    left: 5%;
+  }
+  .sub-menu {
+    z-index: 5000;
+    display: none;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+
+  .active {
+    display: block;
+  }
+  .sub-menu-item {
+    z-index: 1002;
+    position: absolute;
+    animation: slide linear 0.35s;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 250px;
+    background-color: #333;
+    color: rgb(222, 222, 222);
+    padding-top: 8rem;
+    font-size: larger;
+    background-color: black;
+  }
+
+  .sub-menu-item li {
+    padding-bottom: 15px;
+    margin: 40px 0;
+  }
+  .sub-menu-item li a {
+    color: white;
+  }
+  body {
+    color: black;
+    background-color: white;
+  }
+  .main-menu-1 {
+    display: flex;
+    gap: 45px;
+    padding-top: 20px;
+    display: none;
+  }
+  .main-menu li:nth-child(odd),
+  .main-menu li:last-child {
+    display: none;
+  }
+  .logo {
+    font-size: larger;
+    display: grid;
+    padding-top: 10px;
+  }
+  .logo span:first-child {
+    font-weight: bold;
+    font-size: 30px;
+    font-family: Sacramento;
+  }
+  .logo span:last-child {
+    letter-spacing: 7px;
+    font-weight: lighter;
+    font-size: 23px;
+    font-family: Sacramento;
+  }
+  .inner-banner {
+    position: absolute;
+    top: 37%;
+    left: 23%;
+    color: white;
+    font-size: larger;
+  }
+  .infor-materials {
+    height: 120px;
+  }
+  .col-6 {
+    height: 450px;
+  }
+  .inner-candle-preview {
+    background: url(https://brooklyncandlestudio.com/cdn/shop/products/limited-edition-playa-samara-candle-brooklyn-candle-studio-505194_900x.jpg?v=1688749765);
+    width: 100%;
+    height: 450px;
+    background-size: cover;
+    padding: 0;
+  }
+  .inner-candle-preview-1 {
+     background: url(https://scontent.cdninstagram.com/v/t51.2885-15/356948138_1237214600266938_1789071231238532259_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=8ae9d6&_nc_ohc=SOsG5Lq1AK0AX9WlwgI&_nc_ht=scontent.cdninstagram.com&edm=AM6HXa8EAAAA&oh=00_AfCbFLYdKvtN3cFOuPUaVFWeyU5mo_CkRvZGUI3qukWv3w&oe=64BAB145);
+    width: 100%;
+    height: 450px;
+    background-size: cover;
+    padding: 0;
+    background-position: center;
+  }
+  .candle-preview-content {
+    margin: 2rem 0 4rem 0;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  #banner {
+    background-image: url(../IMG/summer_hp_1600x.webp);
+    height: 400px;
+    width: 100%;
+    background-size: cover;
+    background-position-x: center;
+    position: relative;
+    background-color: rgb(220, 229, 226);
+    margin-bottom: 6rem;
+    transition: all 0.9s ease-in-out;
+  }
+  .inner-banner {
+    position: absolute;
+    top: 37%;
+    left: 3%;
+    font-size: small;
+  }
+  .inner-banner p {
+    text-align: center;
+    margin-bottom: 33px;
+    font-size: small;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  }
+  .inner-banner h3 {
+    text-align: center;
+    margin-bottom: 20px;
+    text-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+  }
+  .inner-banner button {
+    display: block;
+    margin: 0 auto;
+    width: 200px;
+    height: 40px;
+    border: none;
+    background-color: white;
+    color: rgb(34, 34, 78);
+    transition: width 0.6s linear;
+  }
+  .about-intro {
+    width: 400px;
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    line-height: 2;
+    color: rgb(34, 34, 78);
+    position: relative;
+    font-size: smaller;
+  }
+  .infor-materials {
+    background: url(https://brooklyncandlestudio.com/cdn/shop/files/icons-01_bb65182c-e541-4e3e-b5d0-8d2addfcc6d7_1600x.jpg?v=1632439678);
+    background-size: contain;
+    width: 100%;
+    height: 60px;
+  }
+  .col-6 {
+    height: 300px;
+  }
+  .inner-candle-preview {
+    background: url(https://brooklyncandlestudio.com/cdn/shop/products/limited-edition-playa-samara-candle-brooklyn-candle-studio-505194_900x.jpg?v=1688749765);
+    width: 100%;
+    height: 300px;
+    background-size: cover;
+    padding: 0;
+    background-position: center;
+  }
+  .inner-candle-preview-1 {
+     background: url(https://scontent.cdninstagram.com/v/t51.2885-15/356948138_1237214600266938_1789071231238532259_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=8ae9d6&_nc_ohc=SOsG5Lq1AK0AX9WlwgI&_nc_ht=scontent.cdninstagram.com&edm=AM6HXa8EAAAA&oh=00_AfCbFLYdKvtN3cFOuPUaVFWeyU5mo_CkRvZGUI3qukWv3w&oe=64BAB145);
+    width: 100%;
+    height: 300px;
+    background-size: cover;
+    padding: 0;
+    background-position: center;
+  }
+  header {
+    padding-right: 10px;
+  }
+  .sub-menu-item {
+    z-index: 1002;
+    position: absolute;
+    animation: slide linear 0.35s;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 250px;
+    background-color: #333;
+    color: rgb(222, 222, 222);
+    padding-top: 3rem;
+    font-size: larger;
+    background-color: black;
+  }
+  .logo {
+    font-size: larger;
+    display: grid;
+    padding-top: 10px;
+    margin-right: 0;
+  }
+ .inner-img {
+    height: 300px;
+}
+} 

@@ -41,6 +41,10 @@ function faReduce(arr, callback, initialValue) {
         return false
     }
 
+    if(typeof callback != "function"){
+        return false
+    }
+
     let result;
     let index;
 
@@ -61,5 +65,5 @@ function faReduce(arr, callback, initialValue) {
 
 const numbers3 = [1, 2, 3, 4];
 
-const sum = faReduce(numbers, (acc, num) => acc + num, 0);
+const sum = faReduce(numbers, (acc, num) => acc.concat(num * 2), []);
 console.log(sum); 
